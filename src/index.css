@@ -50,6 +50,5 @@ body {
   font-family: var(--family);
   color: var(--colors-text);
   font-weight: var(--fw-light);
-  border-color: var(--colors-bg);
-  background-color: var(--colors-ui-base);
+  background-color: var(--colors-bg);
 }
