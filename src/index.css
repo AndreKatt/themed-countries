@@ -18,8 +18,16 @@
   --radii: 0.5rem;
 }
 
-body {
-  margin: 0;
+html {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+html, body {
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
 }
 
 body[data-theme='dark'] {
@@ -43,4 +51,5 @@ body {
   color: var(--colors-text);
   font-weight: var(--fw-light);
   border-color: var(--colors-bg);
+  background-color: var(--colors-ui-base);
 }
