@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+
 import { CustomSelect } from './CustomSelect';
 import { Search } from './Search';
 
@@ -23,12 +24,20 @@ const Wrapper = styled.div`
 	}
 `;
 
-export const Controls = () => {
-	const [region, setRegion] = useState('')
+export const Controls = ({ onSearch }) => {
+	const [search, setSearch] = useState('');
+	const [region, setRegion] = useState('');
+
+	useEffect(() => {
+		const regionValue = region?.value || ''; 
+		console.log(region);
+		onSearch(search, regionValue);
+		// eslint-disable-next-line
+	}, [search, region]);
 
   return (
 	<Wrapper>
-		<Search />
+		<Search search={search} setSearch={setSearch} />
 		<CustomSelect 
 			options={options}
 			placeholder="Filter by Region"
