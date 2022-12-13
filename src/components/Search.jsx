@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import { IoSearch } from 'react-icons/io5';
-import { useState } from 'react';
 
 const InputContainer = styled.label`
 	background-color: var(--colors-ui-base);
