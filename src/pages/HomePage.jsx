@@ -32,6 +32,12 @@ export const HomePage = ({countries, setCountries}) => {
       // eslint-disable-next-line
   }, []);
 
+  useEffect(() => {
+    handleSearch();
+    // eslint-disable-next-line
+  }, [countries])
+  
+
   return (
 	<>
 		<Controls onSearch={handleSearch} />
